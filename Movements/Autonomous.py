@@ -38,6 +38,7 @@ class AutonomousSearchController:
         self.strafe_direction = 1 
         self.target_y_limit = 0.0
         self.temp_x_limit = None
+        self.escaped_wall_scroll = False
         self.search_state = "SWEEPING"
         
         # Flag to check if a scroll was detected in the current step
@@ -96,6 +97,7 @@ class AutonomousSearchController:
                  if self.target_scroll_x <= scroll_safe_margin or self.target_scroll_x >= FIELD_WIDTH - scroll_safe_margin:
                      print(f"Target scroll at X={self.target_scroll_x:.2f} is trapped near the wall! Adjusting strategy.")
                      self.strafe_direction *= -1
+                     self.escaped_wall_scroll = True
                      if self.target_scroll_x <= scroll_safe_margin:
                          self.temp_x_limit = self.target_scroll_x + (SCROLL_SIZE / 2.0) + (ROBOT_WIDTH / 2.0) + MOVING_ALLOWANCE
                      else:
@@ -137,7 +139,13 @@ class AutonomousSearchController:
             if self.current_y >= self.target_y_limit:
                 vx = 0.0
                 self.search_state = "SWEEPING"
-                print("Forward movement target reached. Switching back to SWEEPING.")
+
+                if self.escaped_wall_scroll:
+                    self.strafe_direction *= -1
+                    self.escaped_wall_scroll = False
+                    print("Scroll avoided: Resuming sweep towards the opposite direction.")
+                else:
+                    print("Forward movement target reached. Switching back to SWEEPING.")
             else:
                 vx = FORWARD_SPEED_X
                 print(f"Moving forward... Current Y: {self.current_y:.2f} / Target: {self.target_y_limit:.2f}")
