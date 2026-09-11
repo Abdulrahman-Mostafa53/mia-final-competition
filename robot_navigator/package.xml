@@ -4,7 +4,7 @@
   <name>robot_navigator</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="Abdulrahman-Mostafa53">abdulrahman</maintainer>
+  <maintainer email="Abdulrahman-Mostafa53@gmail.com">abdulrahman</maintainer>
   <license>TODO: License declaration</license>
 
   <test_depend>ament_copyright</test_depend>

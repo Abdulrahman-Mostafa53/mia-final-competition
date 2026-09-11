@@ -6,9 +6,7 @@
 
   <!-- Gazebo Sensors System Plugin -->
   <gazebo>
-    <plugin
-      filename="gz-sim-sensors-system"
-      name="gz::sim::systems::Sensors">
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
       <render_engine>ogre2</render_engine>
     </plugin>
   </gazebo>
@@ -330,7 +328,6 @@
     <sensor name="camera" type="camera">
       <topic>camera/image</topic>
       <camera_info_topic>camera/camera_info</camera_info_topic>
-      <gz_frame_id>camera_link_optical</gz_frame_id>
       <update_rate>30</update_rate>
       <always_on>true</always_on>
       <visualize>true</visualize>
@@ -339,16 +336,13 @@
         <image>
           <width>1980</width>
           <height>1020</height>
-          <format>R8G8B8</format>
+          <!-- Change from R8G8B8 to L8 for 8-bit monochrome -->
+          <format>L8</format>
         </image>
         <clip>
           <near>0.1</near>
           <far>50.0</far>
         </clip>
-        <noise>
-          <type>gaussian</type>
-          <stddev>0.055</stddev>
-        </noise>
       </camera>
     </sensor>
   </gazebo>
