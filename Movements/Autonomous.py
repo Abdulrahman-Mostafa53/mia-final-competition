@@ -116,7 +116,10 @@ class AutonomousSearchController:
                elif self.strafe_direction == -1 and self.current_x <= self.temp_x_limit:
                  hit_boundary = True
              else:
-               if self.current_x >= SAFE_MAX_X or self.current_x <= SAFE_MIN_X:
+               # Check only the boundary corresponding to the current movement direction
+                if self.strafe_direction == 1 and self.current_x >= SAFE_MAX_X:
+                 hit_boundary = True
+                elif self.strafe_direction == -1 and self.current_x <= SAFE_MIN_X:
                  hit_boundary = True
 
              if hit_boundary:
