@@ -19,6 +19,7 @@ class YoloCamera(Node):
             cv_image = self.bridge_object.imgmsg_to_cv2(msg, desired_encoding="mono8")
             cv2.imshow('frame from camera',cv_image)
             cv2.waitKey(1)
+            
         except CvBridgeError as e:
             print(e)
 
