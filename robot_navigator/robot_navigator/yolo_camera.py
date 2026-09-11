@@ -9,17 +9,17 @@ cv2.namedWindow("frame from camera",cv2.WINDOW_NORMAL)
 class YoloCamera(Node):
     def __init__(self):
         super().__init__("yolo_camera")
-        self.cam_subscriber = self.create_subscription(
-            Image, "mono/image", self.analyze_camera, 10
-        )
-        self.bridge_object = CvBridge()
+        # self.cam_subscriber = self.create_subscription(
+        #     Image, "mono/image", self.analyze_camera, 10
+        # )
+        # self.bridge_object = CvBridge()
 
     def analyze_camera(self, msg):
         try:
-            cv_image = self.bridge_object.imgmsg_to_cv2(msg, desired_encoding="mono8")
-            cv2.imshow('frame from camera',cv_image)
-            cv2.waitKey(1)
-            
+            # cv_image = self.bridge_object.imgmsg_to_cv2(msg, desired_encoding="mono8")
+            # cv2.imshow('frame from camera',cv_image)
+            # cv2.waitKey(1)
+            pass
         except CvBridgeError as e:
             print(e)
 
