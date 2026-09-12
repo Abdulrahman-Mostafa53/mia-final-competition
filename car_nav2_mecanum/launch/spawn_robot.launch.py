@@ -11,8 +11,12 @@ def generate_launch_description():
     pkg_car_nav2_mecanum = get_package_share_directory('car_nav2_mecanum')
     ros_gz_sim_share = get_package_share_directory('ros_gz_sim')
 
+    world_path = os.path.join(pkg_car_nav2_mecanum,"worlds","contest_map.sdf")
+
     # Environment setup for Gazebo model discovery
-    gazebo_models_path, _ = os.path.split(pkg_car_nav2_mecanum)
+    gazebo_models_path = os.path.join(pkg_car_nav2_mecanum,"models")
+
+
     if "GZ_SIM_RESOURCE_PATH" in os.environ:
         os.environ["GZ_SIM_RESOURCE_PATH"] += os.pathsep + gazebo_models_path
     else:
@@ -24,12 +28,12 @@ def generate_launch_description():
     )
 
     x_arg = DeclareLaunchArgument(
-        'x', default_value='2.5',
+        'x', default_value='-1.397870',
         description='x coordinate of spawned robot'
     )
 
     y_arg = DeclareLaunchArgument(
-        'y', default_value='1.5',
+        'y', default_value='1.119620',
         description='y coordinate of spawned robot'
     )
 
@@ -62,7 +66,7 @@ def generate_launch_description():
             os.path.join(ros_gz_sim_share, 'launch', 'gz_sim.launch.py')
         ),
         launch_arguments={
-            'gz_args': '-r empty.sdf'
+            'gz_args': f'-r {world_path}'
         }.items()
     )
 
