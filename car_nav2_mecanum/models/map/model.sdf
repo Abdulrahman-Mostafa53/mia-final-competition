@@ -2,13 +2,13 @@
 <sdf version="1.6">
   <model name="map">
     <!-- Set to false so physics and gravity apply -->
-    <static>false</static>
+    <static>true</static>
     
     <link name="link">
       
       <!-- Physical Mass & Inertia Properties -->
       <inertial>
-        <mass>50.0</mass> <!-- Mass in kg -->
+        <mass>5000000000.0</mass> <!-- Mass in kg -->
         <inertia>
           <ixx>1.0</ixx><ixy>0.0</ixy><ixz>0.0</ixz>
           <iyy>1.0</iyy><iyz>0.0</iyz>

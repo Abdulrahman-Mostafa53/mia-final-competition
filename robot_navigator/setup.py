@@ -27,7 +27,8 @@ setup(
     entry_points={
         'console_scripts': [
             "yolo_camera = robot_navigator.yolo_camera:main",
-            "movement_node = robot_navigator.movement_node:main"
+            "movement_node = robot_navigator.movement_node:main",
+            "autonomous_search_node = robot_navigator.autonomous_search_node:main"
         ],
     },
 )

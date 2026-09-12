@@ -71,18 +71,10 @@ class Movement_Node(Node):
                     if abs(final_val)>=(3.14/4):
                         key_angular_velocity_map[key_speed] = math.copysign(3.14/4,key_angular_velocity_map[key_speed])
                         
-
-                        
-                self.get_logger().info(str(key_Linear_velocity_map))
-                self.get_logger().info(str(key_angular_velocity_map))
             
-            
-            
-
 
     def on_key_release(self, key):
         # handle key release
-        self.get_logger().info("key [released] {key}")
         msg = Twist()
         msg.linear.x = 0.0
         msg.linear.y = 0.0

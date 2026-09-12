@@ -36,4 +36,12 @@ def generate_launch_description():
     robot_motion_node = Node(
         executable= "movement_node" , name="movement_node" , package="robot_navigator"
     )
-    return LaunchDescription([yolo_camera_node,robot_motion_node,simulation])
+
+    camera_driver_node = Node(
+        executable= "mono_publisher" , name="mono_publisher" , package="camera_drivers"
+    )
+
+    auto_node = Node(
+        executable= "autonomous_search_node" , name="autonomous_search_node" , package="robot_navigator"
+    )
+    return LaunchDescription([bring_up])

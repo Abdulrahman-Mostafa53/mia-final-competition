@@ -345,5 +345,58 @@
       </camera>
     </sensor>
   </gazebo>
+  <!-- Ultrasonic Sensor Link and Joint -->
+  <joint name="ultrasonic_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="ultrasonic_link"/>
+    <!-- Positioned at the front center of your 0.4m chassis -->
+    <origin xyz="0.2 0 0.08" rpy="0 0 0"/>
+  </joint>
 
+  <link name="ultrasonic_link">
+    <visual>
+      <geometry>
+        <box size="0.02 0.05 0.02"/>
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.02 0.05 0.02"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.01"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <!-- Gazebo Sensor Configuration with Shortened Topic Name -->
+  <gazebo reference="ultrasonic_link">
+    <sensor name="ultrasonic_sensor" type="gpu_ray">
+      <always_on>true</always_on>
+      <visualize>true</visualize>
+      <update_rate>10</update_rate>
+
+      <!-- Shortened Gazebo topic name trick -->
+      <topic>ultrasonic/scan</topic>
+
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>5</samples>
+            <resolution>1.0</resolution>
+            <min_angle>-0.1</min_angle>            <!-- Field of view cone -->
+            <max_angle>0.1</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.05</min>
+          <max>3.0</max>
+          <resolution>0.01</resolution>
+        </range>
+      </ray>
+      <!-- Utilizing your global gz-sim-sensors-system system -->
+    </sensor>
+  </gazebo>
 </robot>

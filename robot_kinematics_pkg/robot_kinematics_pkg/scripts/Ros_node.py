@@ -3,6 +3,15 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from std_msgs.msg import Float32MultiArray
 
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
+
+qos_profile = QoSProfile(
+    reliability=ReliabilityPolicy.BEST_EFFORT,
+    durability=DurabilityPolicy.VOLATILE,
+    history=HistoryPolicy.KEEP_LAST,
+    depth=3
+)
+
 # ROS2 Node
 class ForwardNode(Node):
     def __init__(self, kin_model):
@@ -10,8 +19,8 @@ class ForwardNode(Node):
 
 
         self.kin = kin_model
-        self.wheel_sub = self.create_subscription(Float32MultiArray, '/encoder_speed', self.wheel_callback, 10)
-        self.odom = self.create_publisher(Twist, '/forward_kinematics/speed', 10)
+        self.wheel_sub = self.create_subscription(Float32MultiArray, '/encoder_speed', self.wheel_callback, 1)
+        self.odom = self.create_publisher(Twist, '/forward_kinematics/speed', 1)
 
     def wheel_callback(self, msg):#fun. for wheel callback
         w = msg.data
