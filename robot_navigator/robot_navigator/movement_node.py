@@ -2,6 +2,7 @@ import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist, TwistStamped
 from pynput import keyboard
+import math
 
 
 # define velocity key mappings
@@ -26,7 +27,7 @@ class Movement_Node(Node):
         self.keyboard_listener.start()
 
 
-        self.lin_speed_mul = 0.5
+        self.lin_speed_mul = 0.2
         self.ang_speed_mul = 0.2
 
 
@@ -36,7 +37,6 @@ class Movement_Node(Node):
         try:
             
             if key.char in key_Linear_velocity_map["x"].keys():
-                self.get_logger().info(str(key_Linear_velocity_map))
                 msg.linear.x = key_Linear_velocity_map["x"][key.char]
                 self.speed_publisher.publish(msg)
 
@@ -47,7 +47,6 @@ class Movement_Node(Node):
         except AttributeError:
 
             if key.name in key_angular_velocity_map.keys():
-                self.get_logger().info(str(key_angular_velocity_map))
                 msg.angular.z = key_angular_velocity_map[key.name]
                 self.speed_publisher.publish(msg)
 
@@ -55,14 +54,29 @@ class Movement_Node(Node):
                 for dir in key_Linear_velocity_map:
                     for key_speed in key_Linear_velocity_map[dir]:
                         initial_val = key_Linear_velocity_map[dir][key_speed]
-                        key_Linear_velocity_map[dir][key_speed] += key_speed_map[key.name] * (initial_val*self.lin_speed_mul)
+                        added_term = key_speed_map[key.name] * (initial_val*self.lin_speed_mul)
+
+                        key_Linear_velocity_map[dir][key_speed] += added_term
+                        final_val = key_Linear_velocity_map[dir][key_speed]
+                        if abs(final_val)>=255:
+                            key_Linear_velocity_map[dir][key_speed] = math.copysign(255,key_Linear_velocity_map[dir][key_speed])
+
 
                 for key_speed in key_angular_velocity_map:
                     initial_val = key_angular_velocity_map[key_speed]
-                    key_angular_velocity_map[key_speed] += key_speed_map[key.name] * (initial_val*self.ang_speed_mul)
+                    added_term =  key_speed_map[key.name] * (initial_val*self.ang_speed_mul)
+                    key_angular_velocity_map[key_speed] += added_term
+                    final_val = key_angular_velocity_map[key_speed]
+                    
+                    if abs(final_val)>=(3.14/4):
+                        key_angular_velocity_map[key_speed] = math.copysign(3.14/4,key_angular_velocity_map[key_speed])
+                        
 
+                        
+                self.get_logger().info(str(key_Linear_velocity_map))
+                self.get_logger().info(str(key_angular_velocity_map))
             
-            # 
+            
             
 
 

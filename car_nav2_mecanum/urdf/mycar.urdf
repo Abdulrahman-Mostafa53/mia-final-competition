@@ -46,7 +46,7 @@
     <visual name='base_link_visual'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/>
       <geometry>
-        <mesh filename = "package://car_nav2_mecanum/meshes/mycar.dae"/>
+        <mesh filename="model://car/meshes/mycar.dae"/>
       </geometry>
     </visual>
 
@@ -78,7 +78,7 @@
     <visual name='front_left_wheel_visual'>
       <origin xyz="0 0 0" rpy="1.5707 0 0"/>
       <geometry>
-        <mesh filename="package://car_nav2_mecanum/meshes/mecanum_wheel_left.STL" scale="0.002 .002 0.002"/>
+        <mesh filename="model://car/meshes/mecanum_wheel_left.STL" scale="0.002 .002 0.002"/>
       </geometry>
       <material name="green"/>
     </visual>
@@ -109,7 +109,7 @@
     <visual name='rear_left_wheel_visual'>
       <origin xyz="0 0 0" rpy="1.5707 0 0"/>
       <geometry>
-        <mesh filename="package://car_nav2_mecanum/meshes/mecanum_wheel_right.STL" scale="0.002 .002 0.002"/>
+        <mesh filename="model://car/meshes/mecanum_wheel_right.STL" scale="0.002 .002 0.002"/>
       </geometry>
       <material name="green"/>
     </visual>
@@ -140,7 +140,7 @@
     <visual name='front_right_wheel_visual'>
       <origin xyz="0 0 0" rpy="1.5707 0 0"/>
       <geometry>
-        <mesh filename="package://car_nav2_mecanum/meshes/mecanum_wheel_right.STL" scale="0.002 .002 0.002"/>
+        <mesh filename="model://car/meshes/mecanum_wheel_right.STL" scale="0.002 .002 0.002"/>
       </geometry>
       <material name="green"/>
     </visual>
@@ -171,7 +171,7 @@
     <visual name='rear_right_wheel_visual'>
       <origin xyz="0 0 0" rpy="1.5707 0 0"/>
       <geometry>
-        <mesh filename="package://car_nav2_mecanum/meshes/mecanum_wheel_left.STL" scale="0.002 .002 0.002"/>
+        <mesh filename="model://car/meshes/mecanum_wheel_left.STL" scale="0.002 .002 0.002"/>
       </geometry>
       <material name="green"/>
     </visual>
@@ -270,7 +270,7 @@
     <visual name='scan_link_visual'>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://car_nav2_mecanum/meshes/lidar.dae"/>
+        <mesh filename="model://car/meshes/lidar.dae"/>
       </geometry>
     </visual>
   </link>
@@ -334,10 +334,9 @@
       <camera>
         <horizontal_fov>1.3962634</horizontal_fov>
         <image>
-          <width>1980</width>
-          <height>1020</height>
-          <!-- Change from R8G8B8 to L8 for 8-bit monochrome -->
-          <format>L8</format>
+          <width>800</width>
+          <height>640</height>
+          <format>RGB_INT8</format>
         </image>
         <clip>
           <near>0.1</near>
