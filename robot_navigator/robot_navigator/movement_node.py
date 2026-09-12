@@ -29,6 +29,7 @@ class Movement_Node(Node):
 
         self.lin_speed_mul = 0.2
         self.ang_speed_mul = 0.2
+        
 
 
     def on_key_press(self, key):

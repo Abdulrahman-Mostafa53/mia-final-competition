@@ -17,7 +17,7 @@ class AutonomousNode(Node):
         
         
         self.ultrasonic_sub = self.create_subscription(
-            Int32, 
+            LaserScan, 
             '/ultrasonic_distance', 
             self.ultrasonic_callback, 
             10
@@ -28,13 +28,11 @@ class AutonomousNode(Node):
 
     def ultrasonic_callback(self, msg):
         # Update the ultrasonic distance reading in the controller state machine
-        self.controller.update_sensor(msg.data/100)
-        self.get_logger().info("hello")
+        self.controller.update_sensor(min(msg.ranges)*100)
 
     def control_loop(self):
         # Compute control commands (vx, vy, omega) based on the current active state
         vx, vy, omega = self.controller.compute_control_command()
-        self.get_logger().info("i am computing")
         # Construct and publish the Twist message
         twist = Twist()
         self.get_logger().info(f"hello {vx} {omega}")

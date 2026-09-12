@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <sdf version="1.6">
   <model name="map">
-    <!-- Set to false so physics and gravity apply -->
+    <!-- Keep static true -->
     <static>true</static>
     
     <link name="link">
       
-      <!-- Physical Mass & Inertia Properties -->
+      <!-- Bulletproof heavy mass & inertia so it physically cannot be pushed -->
       <inertial>
-        <mass>5000000000.0</mass> <!-- Mass in kg -->
+        <mass>5000000000.0</mass>
         <inertia>
           <ixx>1.0</ixx><ixy>0.0</ixy><ixz>0.0</ixz>
           <iyy>1.0</iyy><iyz>0.0</iyz>
@@ -24,6 +24,17 @@
             <scale>1.0 1.0 1.0</scale>
           </mesh>
         </geometry>
+        
+        <!-- Surface friction properties -->
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
+        
       </collision>
 
       <!-- Visual Appearance -->
