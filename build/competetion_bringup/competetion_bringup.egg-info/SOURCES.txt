@@ -1,0 +1,15 @@
+package.xml
+setup.cfg
+setup.py
+../build/competetion_bringup/competetion_bringup.egg-info/PKG-INFO
+../build/competetion_bringup/competetion_bringup.egg-info/SOURCES.txt
+../build/competetion_bringup/competetion_bringup.egg-info/dependency_links.txt
+../build/competetion_bringup/competetion_bringup.egg-info/requires.txt
+../build/competetion_bringup/competetion_bringup.egg-info/top_level.txt
+../build/competetion_bringup/competetion_bringup.egg-info/zip-safe
+competetion_bringup/__init__.py
+launch/bringup.launch.py
+resource/competetion_bringup
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

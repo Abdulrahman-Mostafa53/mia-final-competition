@@ -1,0 +1,50 @@
+running egg_info
+creating ../build/robot_navigator/robot_navigator.egg-info
+writing ../build/robot_navigator/robot_navigator.egg-info/PKG-INFO
+writing dependency_links to ../build/robot_navigator/robot_navigator.egg-info/dependency_links.txt
+writing entry points to ../build/robot_navigator/robot_navigator.egg-info/entry_points.txt
+writing requirements to ../build/robot_navigator/robot_navigator.egg-info/requires.txt
+writing top-level names to ../build/robot_navigator/robot_navigator.egg-info/top_level.txt
+writing manifest file '../build/robot_navigator/robot_navigator.egg-info/SOURCES.txt'
+reading manifest file '../build/robot_navigator/robot_navigator.egg-info/SOURCES.txt'
+writing manifest file '../build/robot_navigator/robot_navigator.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/ziad/base/mia-final-competition/build/robot_navigator/build
+creating /home/ziad/base/mia-final-competition/build/robot_navigator/build/lib
+creating /home/ziad/base/mia-final-competition/build/robot_navigator/build/lib/robot_navigator
+copying robot_navigator/movement_node.py -> /home/ziad/base/mia-final-competition/build/robot_navigator/build/lib/robot_navigator
+copying robot_navigator/autonomous_search_node.py -> /home/ziad/base/mia-final-competition/build/robot_navigator/build/lib/robot_navigator
+copying robot_navigator/yolo_camera.py -> /home/ziad/base/mia-final-competition/build/robot_navigator/build/lib/robot_navigator
+copying robot_navigator/__init__.py -> /home/ziad/base/mia-final-competition/build/robot_navigator/build/lib/robot_navigator
+copying robot_navigator/auto.py -> /home/ziad/base/mia-final-competition/build/robot_navigator/build/lib/robot_navigator
+running install
+running install_lib
+creating /home/ziad/base/mia-final-competition/install/robot_navigator/lib/python3.12/site-packages/robot_navigator
+copying /home/ziad/base/mia-final-competition/build/robot_navigator/build/lib/robot_navigator/movement_node.py -> /home/ziad/base/mia-final-competition/install/robot_navigator/lib/python3.12/site-packages/robot_navigator
+copying /home/ziad/base/mia-final-competition/build/robot_navigator/build/lib/robot_navigator/autonomous_search_node.py -> /home/ziad/base/mia-final-competition/install/robot_navigator/lib/python3.12/site-packages/robot_navigator
+copying /home/ziad/base/mia-final-competition/build/robot_navigator/build/lib/robot_navigator/yolo_camera.py -> /home/ziad/base/mia-final-competition/install/robot_navigator/lib/python3.12/site-packages/robot_navigator
+copying /home/ziad/base/mia-final-competition/build/robot_navigator/build/lib/robot_navigator/__init__.py -> /home/ziad/base/mia-final-competition/install/robot_navigator/lib/python3.12/site-packages/robot_navigator
+copying /home/ziad/base/mia-final-competition/build/robot_navigator/build/lib/robot_navigator/auto.py -> /home/ziad/base/mia-final-competition/install/robot_navigator/lib/python3.12/site-packages/robot_navigator
+byte-compiling /home/ziad/base/mia-final-competition/install/robot_navigator/lib/python3.12/site-packages/robot_navigator/movement_node.py to movement_node.cpython-312.pyc
+byte-compiling /home/ziad/base/mia-final-competition/install/robot_navigator/lib/python3.12/site-packages/robot_navigator/autonomous_search_node.py to autonomous_search_node.cpython-312.pyc
+byte-compiling /home/ziad/base/mia-final-competition/install/robot_navigator/lib/python3.12/site-packages/robot_navigator/yolo_camera.py to yolo_camera.cpython-312.pyc
+byte-compiling /home/ziad/base/mia-final-competition/install/robot_navigator/lib/python3.12/site-packages/robot_navigator/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/ziad/base/mia-final-competition/install/robot_navigator/lib/python3.12/site-packages/robot_navigator/auto.py to auto.cpython-312.pyc
+running install_data
+creating /home/ziad/base/mia-final-competition/install/robot_navigator/share/ament_index
+creating /home/ziad/base/mia-final-competition/install/robot_navigator/share/ament_index/resource_index
+creating /home/ziad/base/mia-final-competition/install/robot_navigator/share/ament_index/resource_index/packages
+copying resource/robot_navigator -> /home/ziad/base/mia-final-competition/install/robot_navigator/share/ament_index/resource_index/packages
+copying package.xml -> /home/ziad/base/mia-final-competition/install/robot_navigator/share/robot_navigator
+creating /home/ziad/base/mia-final-competition/install/robot_navigator/share/robot_navigator/launch
+copying launch/go_bot.launch.py -> /home/ziad/base/mia-final-competition/install/robot_navigator/share/robot_navigator/launch
+creating /home/ziad/base/mia-final-competition/install/robot_navigator/share/robot_navigator/yolo_model
+copying yolo_model/best.pt -> /home/ziad/base/mia-final-competition/install/robot_navigator/share/robot_navigator/yolo_model
+running install_egg_info
+Copying ../build/robot_navigator/robot_navigator.egg-info to /home/ziad/base/mia-final-competition/install/robot_navigator/lib/python3.12/site-packages/robot_navigator-0.0.0-py3.12.egg-info
+running install_scripts
+Installing autonomous_search_node script to /home/ziad/base/mia-final-competition/install/robot_navigator/lib/robot_navigator
+Installing movement_node script to /home/ziad/base/mia-final-competition/install/robot_navigator/lib/robot_navigator
+Installing yolo_camera script to /home/ziad/base/mia-final-competition/install/robot_navigator/lib/robot_navigator
+writing list of installed files to '/home/ziad/base/mia-final-competition/build/robot_navigator/install.log'

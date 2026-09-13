@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="obj4">
+    <!-- Dynamic rigid body (responds to gravity and collisions) -->
+    <static>false</static>
+    
+    <link name="link">
+      <inertial>
+        <mass>1.0</mass>
+        <inertia>
+          <ixx>0.020417</ixx><ixy>0.0</ixy><ixz>0.0</ixz>
+          <iyy>0.020417</iyy><iyz>0.0</iyz>
+          <izz>0.020417</izz>
+        </inertia>
+      </inertial>
+
+      <!-- Mesh Collision -->
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://obj4/meshes/obj4.glb</uri>
+            <scale>1.0 1.0 1.0</scale>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <!-- Visual Mesh -->
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://obj4/meshes/obj4.glb</uri>
+            <scale>1.0 1.0 1.0</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

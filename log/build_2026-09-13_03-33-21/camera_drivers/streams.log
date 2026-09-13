@@ -1,0 +1,123 @@
+[0.745s] Invoking command in '/home/ziad/base/mia-final-competition/camera_drivers': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ziad/base/mia-final-competition/build/camera_drivers/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/camera_drivers build --build-base /home/ziad/base/mia-final-competition/build/camera_drivers/build install --record /home/ziad/base/mia-final-competition/build/camera_drivers/install.log --install-scripts $base/lib/camera_drivers --single-version-externally-managed install_data
+[0.878s] running egg_info
+[0.878s] creating ../build/camera_drivers/camera_drivers.egg-info
+[0.887s] writing ../build/camera_drivers/camera_drivers.egg-info/PKG-INFO
+[0.887s] writing dependency_links to ../build/camera_drivers/camera_drivers.egg-info/dependency_links.txt
+[0.887s] writing entry points to ../build/camera_drivers/camera_drivers.egg-info/entry_points.txt
+[0.887s] writing requirements to ../build/camera_drivers/camera_drivers.egg-info/requires.txt
+[0.887s] writing top-level names to ../build/camera_drivers/camera_drivers.egg-info/top_level.txt
+[0.887s] writing manifest file '../build/camera_drivers/camera_drivers.egg-info/SOURCES.txt'
+[0.906s] reading manifest file '../build/camera_drivers/camera_drivers.egg-info/SOURCES.txt'
+[0.907s] writing manifest file '../build/camera_drivers/camera_drivers.egg-info/SOURCES.txt'
+[0.907s] running build
+[0.907s] running build_py
+[0.907s] creating /home/ziad/base/mia-final-competition/build/camera_drivers/build
+[0.907s] creating /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib
+[0.907s] creating /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers
+[0.907s] copying camera_drivers/cameraclass.py -> /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers
+[0.907s] copying camera_drivers/cameradriver.py -> /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers
+[0.907s] copying camera_drivers/__init__.py -> /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers
+[0.907s] copying camera_drivers/camera_index_tester.py -> /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers
+[0.907s] creating /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples
+[0.907s] creating /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/mono
+[0.907s] copying camera_drivers/examples/mono/mono_server.py -> /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/mono
+[0.907s] copying camera_drivers/examples/mono/mono_publisher.py -> /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/mono
+[0.907s] copying camera_drivers/examples/mono/mono_client.py -> /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/mono
+[0.908s] copying camera_drivers/examples/mono/__init__.py -> /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/mono
+[0.908s] copying camera_drivers/examples/mono/mono_getter.py -> /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/mono
+[0.908s] copying camera_drivers/examples/mono/mono_subscriber.py -> /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/mono
+[0.908s] creating /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/stereo
+[0.908s] copying camera_drivers/examples/stereo/__init__.py -> /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/stereo
+[0.908s] copying camera_drivers/examples/stereo/stereo_server.py -> /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/stereo
+[0.908s] copying camera_drivers/examples/stereo/stereo_client.py -> /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/stereo
+[0.908s] copying camera_drivers/examples/stereo/stereo_publisher.py -> /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/stereo
+[0.908s] copying camera_drivers/examples/stereo/stereo_subscriber.py -> /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/stereo
+[0.908s] copying camera_drivers/examples/stereo/stereo_getter.py -> /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/stereo
+[0.908s] creating /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/kinect_v1
+[0.908s] copying camera_drivers/examples/kinect_v1/kinect_v1_subscriber2.py -> /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/kinect_v1
+[0.908s] copying camera_drivers/examples/kinect_v1/__init__.py -> /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/kinect_v1
+[0.908s] copying camera_drivers/examples/kinect_v1/kinect_v1_subscriber.py -> /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/kinect_v1
+[0.908s] creating /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/kinect_v2
+[0.908s] copying camera_drivers/examples/kinect_v2/kinect_v2_subscriber2.py -> /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/kinect_v2
+[0.908s] copying camera_drivers/examples/kinect_v2/kinect_v2_subscriber.py -> /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/kinect_v2
+[0.908s] creating /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/python_stereo_camera_calibrate
+[0.908s] copying camera_drivers/python_stereo_camera_calibrate/calib.py -> /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/python_stereo_camera_calibrate
+[0.908s] running install
+[0.912s] running install_lib
+[0.921s] creating /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers
+[0.921s] copying /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/cameraclass.py -> /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers
+[0.921s] copying /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/cameradriver.py -> /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers
+[0.921s] copying /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/__init__.py -> /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers
+[0.921s] copying /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/camera_index_tester.py -> /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers
+[0.921s] creating /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples
+[0.921s] creating /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/kinect_v1
+[0.921s] copying /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/kinect_v1/kinect_v1_subscriber2.py -> /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/kinect_v1
+[0.921s] copying /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/kinect_v1/__init__.py -> /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/kinect_v1
+[0.921s] copying /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/kinect_v1/kinect_v1_subscriber.py -> /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/kinect_v1
+[0.921s] creating /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/kinect_v2
+[0.922s] copying /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/kinect_v2/kinect_v2_subscriber2.py -> /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/kinect_v2
+[0.922s] copying /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/kinect_v2/kinect_v2_subscriber.py -> /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/kinect_v2
+[0.922s] creating /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/stereo
+[0.922s] copying /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/stereo/__init__.py -> /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/stereo
+[0.922s] copying /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/stereo/stereo_server.py -> /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/stereo
+[0.922s] copying /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/stereo/stereo_client.py -> /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/stereo
+[0.922s] copying /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/stereo/stereo_publisher.py -> /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/stereo
+[0.922s] copying /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/stereo/stereo_subscriber.py -> /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/stereo
+[0.922s] copying /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/stereo/stereo_getter.py -> /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/stereo
+[0.922s] creating /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/mono
+[0.922s] copying /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/mono/mono_server.py -> /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/mono
+[0.922s] copying /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/mono/mono_publisher.py -> /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/mono
+[0.922s] copying /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/mono/mono_client.py -> /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/mono
+[0.922s] copying /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/mono/__init__.py -> /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/mono
+[0.922s] copying /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/mono/mono_getter.py -> /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/mono
+[0.922s] copying /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/examples/mono/mono_subscriber.py -> /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/mono
+[0.922s] creating /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/python_stereo_camera_calibrate
+[0.922s] copying /home/ziad/base/mia-final-competition/build/camera_drivers/build/lib/camera_drivers/python_stereo_camera_calibrate/calib.py -> /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/python_stereo_camera_calibrate
+[0.922s] byte-compiling /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/cameraclass.py to cameraclass.cpython-312.pyc
+[0.924s] byte-compiling /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/cameradriver.py to cameradriver.cpython-312.pyc
+[0.925s] byte-compiling /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/__init__.py to __init__.cpython-312.pyc
+[0.925s] byte-compiling /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/camera_index_tester.py to camera_index_tester.cpython-312.pyc
+[0.926s] byte-compiling /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/kinect_v1/kinect_v1_subscriber2.py to kinect_v1_subscriber2.cpython-312.pyc
+[0.926s] byte-compiling /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/kinect_v1/__init__.py to __init__.cpython-312.pyc
+[0.926s] byte-compiling /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/kinect_v1/kinect_v1_subscriber.py to kinect_v1_subscriber.cpython-312.pyc
+[0.926s] byte-compiling /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/kinect_v2/kinect_v2_subscriber2.py to kinect_v2_subscriber2.cpython-312.pyc
+[0.926s] byte-compiling /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/kinect_v2/kinect_v2_subscriber.py to kinect_v2_subscriber.cpython-312.pyc
+[0.926s] byte-compiling /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/stereo/__init__.py to __init__.cpython-312.pyc
+[0.926s] byte-compiling /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/stereo/stereo_server.py to stereo_server.cpython-312.pyc
+[0.926s] byte-compiling /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/stereo/stereo_client.py to stereo_client.cpython-312.pyc
+[0.927s] byte-compiling /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/stereo/stereo_publisher.py to stereo_publisher.cpython-312.pyc
+[0.927s] byte-compiling /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/stereo/stereo_subscriber.py to stereo_subscriber.cpython-312.pyc
+[0.927s] byte-compiling /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/stereo/stereo_getter.py to stereo_getter.cpython-312.pyc
+[0.927s] byte-compiling /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/mono/mono_server.py to mono_server.cpython-312.pyc
+[0.927s] byte-compiling /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/mono/mono_publisher.py to mono_publisher.cpython-312.pyc
+[0.928s] byte-compiling /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/mono/mono_client.py to mono_client.cpython-312.pyc
+[0.928s] byte-compiling /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/mono/__init__.py to __init__.cpython-312.pyc
+[0.928s] byte-compiling /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/mono/mono_getter.py to mono_getter.cpython-312.pyc
+[0.928s] byte-compiling /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/examples/mono/mono_subscriber.py to mono_subscriber.cpython-312.pyc
+[0.928s] byte-compiling /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers/python_stereo_camera_calibrate/calib.py to calib.cpython-312.pyc
+[0.931s] running install_data
+[0.931s] creating /home/ziad/base/mia-final-competition/install/camera_drivers/share/ament_index
+[0.931s] creating /home/ziad/base/mia-final-competition/install/camera_drivers/share/ament_index/resource_index
+[0.931s] creating /home/ziad/base/mia-final-competition/install/camera_drivers/share/ament_index/resource_index/packages
+[0.931s] copying resource/camera_drivers -> /home/ziad/base/mia-final-competition/install/camera_drivers/share/ament_index/resource_index/packages
+[0.931s] copying package.xml -> /home/ziad/base/mia-final-competition/install/camera_drivers/share/camera_drivers
+[0.931s] running install_egg_info
+[0.941s] Copying ../build/camera_drivers/camera_drivers.egg-info to /home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages/camera_drivers-0.0.0-py3.12.egg-info
+[0.942s] running install_scripts
+[1.006s] Installing index_tester script to /home/ziad/base/mia-final-competition/install/camera_drivers/lib/camera_drivers
+[1.006s] Installing kinect_v1_subscriber script to /home/ziad/base/mia-final-competition/install/camera_drivers/lib/camera_drivers
+[1.006s] Installing kinect_v1_subscriber2 script to /home/ziad/base/mia-final-competition/install/camera_drivers/lib/camera_drivers
+[1.006s] Installing kinect_v2_subscriber script to /home/ziad/base/mia-final-competition/install/camera_drivers/lib/camera_drivers
+[1.006s] Installing kinect_v2_subscriber2 script to /home/ziad/base/mia-final-competition/install/camera_drivers/lib/camera_drivers
+[1.006s] Installing mono_client script to /home/ziad/base/mia-final-competition/install/camera_drivers/lib/camera_drivers
+[1.006s] Installing mono_getter script to /home/ziad/base/mia-final-competition/install/camera_drivers/lib/camera_drivers
+[1.007s] Installing mono_publisher script to /home/ziad/base/mia-final-competition/install/camera_drivers/lib/camera_drivers
+[1.007s] Installing mono_server script to /home/ziad/base/mia-final-competition/install/camera_drivers/lib/camera_drivers
+[1.007s] Installing mono_subscriber script to /home/ziad/base/mia-final-competition/install/camera_drivers/lib/camera_drivers
+[1.007s] Installing stereo_client script to /home/ziad/base/mia-final-competition/install/camera_drivers/lib/camera_drivers
+[1.007s] Installing stereo_getter script to /home/ziad/base/mia-final-competition/install/camera_drivers/lib/camera_drivers
+[1.007s] Installing stereo_publisher script to /home/ziad/base/mia-final-competition/install/camera_drivers/lib/camera_drivers
+[1.007s] Installing stereo_server script to /home/ziad/base/mia-final-competition/install/camera_drivers/lib/camera_drivers
+[1.007s] Installing stereo_subscriber script to /home/ziad/base/mia-final-competition/install/camera_drivers/lib/camera_drivers
+[1.007s] writing list of installed files to '/home/ziad/base/mia-final-competition/build/camera_drivers/install.log'
+[1.021s] Invoked command in '/home/ziad/base/mia-final-competition/camera_drivers' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ziad/base/mia-final-competition/build/camera_drivers/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ziad/base/mia-final-competition/install/camera_drivers/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/camera_drivers build --build-base /home/ziad/base/mia-final-competition/build/camera_drivers/build install --record /home/ziad/base/mia-final-competition/build/camera_drivers/install.log --install-scripts $base/lib/camera_drivers --single-version-externally-managed install_data

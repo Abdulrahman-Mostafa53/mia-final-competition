@@ -1,0 +1,6 @@
+{
+  "package_name": "srv_pkg",
+  "non_idl_tuples": [
+    "/home/ziad/base/mia-final-competition/srv_pkg:srv/SendImg.srv"
+  ]
+}
