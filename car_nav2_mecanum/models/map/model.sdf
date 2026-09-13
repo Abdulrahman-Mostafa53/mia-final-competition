@@ -1,18 +1,21 @@
 <?xml version="1.0"?>
 <sdf version="1.6">
   <model name="map">
+    <!-- Model-level pose -->
+    <pose>0 0 -3.0 0 0 0</pose>
+    
     <!-- Keep static true -->
     <static>true</static>
     
     <link name="link">
       
-      <!-- Bulletproof heavy mass & inertia so it physically cannot be pushed -->
+      <!-- Bulletproof heavy mass & inertia -->
       <inertial>
         <mass>5000000000.0</mass>
         <inertia>
-          <ixx>1.0</ixx><ixy>0.0</ixy><ixz>0.0</ixz>
+          <ixx>10000.0</ixx><ixy>0.0</ixy><ixz>0.0</ixz>
           <iyy>1.0</iyy><iyz>0.0</iyz>
-          <izz>1.0</izz>
+          <izz>10000.0</izz>
         </inertia>
       </inertial>
 
@@ -25,7 +28,6 @@
           </mesh>
         </geometry>
         
-        <!-- Surface friction properties -->
         <surface>
           <friction>
             <ode>
@@ -34,7 +36,6 @@
             </ode>
           </friction>
         </surface>
-        
       </collision>
 
       <!-- Visual Appearance -->

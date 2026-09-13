@@ -4,6 +4,7 @@ from geometry_msgs.msg import Twist
 from sensor_msgs.msg import LaserScan
 from std_msgs.msg import Int32
 from robot_navigator.auto import AutonomousSearchController
+import time
 
 class AutonomousNode(Node):
     def __init__(self):
@@ -24,7 +25,7 @@ class AutonomousNode(Node):
         )
         
         # Periodic control loop timer running at 20 Hz (every 0.05 seconds)
-        self.timer = self.create_timer(0.05, self.control_loop)
+        self.timer = self.create_timer(0.005, self.control_loop)
 
     def ultrasonic_callback(self, msg):
         # Update the ultrasonic distance reading in the controller state machine
@@ -35,7 +36,6 @@ class AutonomousNode(Node):
         vx, vy, omega = self.controller.compute_control_command()
         # Construct and publish the Twist message
         twist = Twist()
-        self.get_logger().info(f"hello {vx} {omega}")
         twist.linear.x = float(vx)
         twist.linear.y = float(vy)
         twist.angular.z = float(omega)
@@ -44,14 +44,19 @@ class AutonomousNode(Node):
 
 def main():
     rclpy.init()
+
     node = AutonomousNode()
     try:
+        time.sleep(7)
         rclpy.spin(node)
     except KeyboardInterrupt:
         pass
     finally:
         node.destroy_node()
-        rclpy.shutdown()
+        node.controller.keyboard_listener.stop()
+        if rclpy.ok():
+
+            rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
