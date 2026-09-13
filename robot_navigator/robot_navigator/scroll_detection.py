@@ -3,15 +3,20 @@ from rclpy.node import Node
 
 from sensor_msgs.msg import Image
 from std_msgs.msg import Float32
+from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist
 
 from cv_bridge import CvBridge
 from ultralytics import YOLO
+import time
 
-from autonomous_controller import AutonomousSearchController
+from pynput import keyboard
 
-MODEL_PATH = "best.pt"          # path to your trained YOLO weights
-CONFIDENCE_THRESHOLD = 0.5      # tune based on your F1-confidence curve
+
+from robot_navigator.autonomous_controller import AutonomousSearchController
+
+MODEL_PATH = "/home/abdulrahman/MIA/contest/src/robot_navigator/yolo_model/best.pt"          # path to your trained YOLO weights
+CONFIDENCE_THRESHOLD = 0.5     # tune based on your F1-confidence curve
 CONTROL_LOOP_HZ = 10.0          # how often we send a cmd_vel command
 
 
@@ -28,25 +33,39 @@ class ScrollDetectionNode(Node):
 
         # --- Subscriptions ---
         self.create_subscription(Image, "/mono/image", self.on_image, 10)
-        self.create_subscription(Float32, "/ultrasonic_distance", self.on_ultrasonic, 10)
+        self.create_subscription(LaserScan, "/ultrasonic_distance", self.on_ultrasonic, 10)
 
         # --- Publisher ---
         self.cmd_pub = self.create_publisher(Twist, "/cmd_vel", 10)
 
         # --- Control loop timer ---
-        self.create_timer(1.0 / CONTROL_LOOP_HZ, self.control_loop)
+        self.timer = self.create_timer(1.0 / CONTROL_LOOP_HZ, self.control_loop)
 
         self.get_logger().info("Scroll detection node started.")
 
-    def on_ultrasonic(self, msg: Float32):
-        self.latest_ultrasonic = msg.data
+        self.keyboard_listener = keyboard.Listener(
+            on_press=self.shut_down_node
+        )
+        self.keyboard_listener.start()
+
+    def shut_down_node(self,key):
+        if key.char == "m":
+            self.get_logger().info("killed auto node")
+            self.timer.cancel()
+            rclpy.shutdown()
+
+
+
+
+    def on_ultrasonic(self, msg):
+        self.latest_ultrasonic = min(msg.ranges)
 
     def on_image(self, msg: Image):
         # Convert the ROS image message into a plain OpenCV/numpy frame
         frame = self.bridge.imgmsg_to_cv2(msg, desired_encoding="bgr8")
         frame_width = frame.shape[1]
 
-        results = self.model.predict(source=frame, conf=CONFIDENCE_THRESHOLD, verbose=False)
+        results = self.model.predict(source=frame, conf=CONFIDENCE_THRESHOLD, verbose=False,iou = 0.5)
 
         detections = []
         for box in results[0].boxes:
@@ -89,12 +108,14 @@ def main(args=None):
     rclpy.init(args=args)
     node = ScrollDetectionNode()
     try:
+        time.sleep(7)
         rclpy.spin(node)
     except KeyboardInterrupt:
         pass
     finally:
         node.destroy_node()
-        rclpy.shutdown()
+        if rclpy.ok():
+            rclpy.shutdown()
 
 
 if __name__ == "__main__":

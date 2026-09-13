@@ -2,14 +2,14 @@ import time
 
 # --- Tunable constants ---
 ROTATE_SPEED = 0.6                 # angular velocity used while scanning (rad/s, robot units)
-FORWARD_SPEED = 0.5                # forward velocity used while approaching a scroll
-APPROACH_DISTANCE = 0.20           # meters - ultrasonic threshold to stop approaching (tune w/ scroll size + robot width)
-CONFIRM_FRAMES_REQUIRED = 5        # consecutive good frames needed before a scroll counts as "confirmed"
-FRAME_CENTER_TOLERANCE = 0.08      # how far off-center (normalized -1..1) is still considered "centered enough"
+FORWARD_SPEED = 0.3                # forward velocity used while approaching a scroll
+APPROACH_DISTANCE = 0.8         # meters - ultrasonic threshold to stop approaching (tune w/ scroll size + robot width)
+CONFIRM_FRAMES_REQUIRED = 30        # consecutive good frames needed before a scroll counts as "confirmed"
+FRAME_CENTER_TOLERANCE = 0.1      # how far off-center (normalized -1..1) is still considered "centered enough"
 FULL_ROTATION_TIME = 8.0           # seconds - estimated time for one full 360 at ROTATE_SPEED (tune empirically on the field)
-REPOSITION_DRIVE_TIME = 1.0        # seconds - short forward hop if a full rotation finds nothing
-REPOSITION_SAFE_DISTANCE = 0.4     # meters - ultrasonic safety cutoff during the repositioning hop
-DISENGAGE_ROTATE_TIME = 2.0        # seconds - rotate away after confirming, before scanning again
+REPOSITION_DRIVE_TIME = 1.5       # seconds - short forward hop if a full rotation finds nothing
+REPOSITION_SAFE_DISTANCE = 0.5    # meters - ultrasonic safety cutoff during the repositioning hop
+DISENGAGE_ROTATE_TIME = 4.0        # seconds - rotate away after confirming, before scanning again
 
 
 class AutonomousSearchController:
@@ -54,13 +54,14 @@ class AutonomousSearchController:
 
         # Should never reach here
         return {"vx": 0.0, "wz": 0.0}
+   
 
     def _best_scroll(self, detected_objects):
-        scrolls = [o for o in detected_objects if o["class"] == "scroll"]
-        if not scrolls:
+        VALID_TARGET_CLASSES = {"R2_fake", "R2_real"}
+        targets = [o for o in detected_objects if o["class"] in VALID_TARGET_CLASSES]
+        if not targets:
             return None
-        # Pick the highest-confidence detection this frame
-        return max(scrolls, key=lambda o: o["confidence"])
+        return max(targets, key=lambda o: o["confidence"])
 
     def _do_rotating_scan(self, best_scroll):
         if best_scroll is not None:

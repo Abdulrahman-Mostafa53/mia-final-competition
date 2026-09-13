@@ -1,9 +1,0 @@
-/home/ziad/base/mia-final-competition/build/car_nav2_mecanum/CMakeFiles/uninstall.dir
-/home/ziad/base/mia-final-competition/build/car_nav2_mecanum/CMakeFiles/car_nav2_mecanum_uninstall.dir
-/home/ziad/base/mia-final-competition/build/car_nav2_mecanum/CMakeFiles/test.dir
-/home/ziad/base/mia-final-competition/build/car_nav2_mecanum/CMakeFiles/edit_cache.dir
-/home/ziad/base/mia-final-competition/build/car_nav2_mecanum/CMakeFiles/rebuild_cache.dir
-/home/ziad/base/mia-final-competition/build/car_nav2_mecanum/CMakeFiles/list_install_components.dir
-/home/ziad/base/mia-final-competition/build/car_nav2_mecanum/CMakeFiles/install.dir
-/home/ziad/base/mia-final-competition/build/car_nav2_mecanum/CMakeFiles/install/local.dir
-/home/ziad/base/mia-final-competition/build/car_nav2_mecanum/CMakeFiles/install/strip.dir

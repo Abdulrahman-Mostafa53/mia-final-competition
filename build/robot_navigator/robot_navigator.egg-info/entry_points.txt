@@ -1,4 +1,0 @@
-[console_scripts]
-autonomous_search_node = robot_navigator.autonomous_search_node:main
-movement_node = robot_navigator.movement_node:main
-yolo_camera = robot_navigator.yolo_camera:main

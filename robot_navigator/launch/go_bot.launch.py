@@ -44,4 +44,7 @@ def generate_launch_description():
     auto_node = Node(
         executable= "autonomous_search_node" , name="autonomous_search_node" , package="robot_navigator"
     )
-    return LaunchDescription([simulation,robot_motion_node,yolo_camera_node,auto_node])
+    scroll_det = Node(
+        executable="scroll_detection_node" , name = "scroll_detection" , package="robot_navigator"
+    )
+    return LaunchDescription([simulation,robot_motion_node,yolo_camera_node,scroll_det])
